@@ -8,13 +8,19 @@ module.exports = {
   output: {
     filename: '[hash].js',
   },
-  plugins: [new HtmlWebpackPlugin({
+  plugins: [
+  new HtmlWebpackPlugin({
     template: path.resolve(__dirname, './src/index.html'),
+    filename: 'index.html'
+  }),
+  new HtmlWebpackPlugin({
+    template: path.resolve(__dirname, './src/login.html'),
+    filename: 'login.html'
   }),
   new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery'
-    })
+    $: 'jquery',
+    jQuery: 'jquery'
+  }),
   ],
   module: {
     rules: [
