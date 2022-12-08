@@ -1,1 +1,2 @@
-console.log(123);
+import  './css/public.css'
+import  './css/index.css'
