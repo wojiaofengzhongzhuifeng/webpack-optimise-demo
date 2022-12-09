@@ -7,7 +7,7 @@ const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin')
 const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin')
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: {
     index112233: path.resolve(__dirname, './src/index.js'),
     login445566: path.resolve(__dirname, './src/login.js'),
