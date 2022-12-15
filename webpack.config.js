@@ -63,5 +63,23 @@ module.exports = {
       new UglifyWebpackPlugin({sourceMap: true}),
       new CssMinimizerWebpackPlugin()
     ],
+    splitChunks:{
+      chunks: 'all',
+      cacheGroups:{
+        vendor: {
+          name: 'vendor',
+          priority: 1,
+          test: /node_modules/,
+          minSize: 0,
+          minChunks: 1,
+        },
+        common: {
+          name: 'common',
+          priority: 0,
+          minSize: 0,
+          minChunks: 1
+        }
+      }
+    }
   }
 }
